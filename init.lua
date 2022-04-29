@@ -6,5 +6,5 @@ require "user.plugins"
 require "user.nvim_autopairs_config"
 
 -- tag: generation 01
--- require "user.autocommands"
--- require "user.colorscheme"
+require "user.autocommands"
+require "user.lunarvim_colorschemes_config"

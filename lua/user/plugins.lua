@@ -1,5 +1,6 @@
 local fn = vim.fn
 
+
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -38,6 +39,7 @@ packer.init {
   },
 }
 
+-- REMEMBER: use :PackerUpdate if plugins are added
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
@@ -45,6 +47,8 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/darkplus.nvim"
 --  use "numToStr/Comment.nvim"
 --  use "kyazdani42/nvim-web-devicons"
 --  use { "kyazdani42/nvim-tree.lua" }
@@ -92,8 +96,6 @@ return packer.startup(function(use)
 --
 --  -- Colorschemes
 --  use "folke/tokyonight.nvim"
---  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
---  use "lunarvim/darkplus.nvim"
 --  use "rose-pine/neovim"
 --  -- use "rebelot/kanagawa.nvim"
 --
