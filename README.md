@@ -7,4 +7,9 @@
 ## Ops
 
 +   :PackerUpdate will rebuild plugins if necessary
+    +   nvim -c PackerUpdate will do it from CLI
 
+## TODO
+
++   integrating PHAN with LSP will require installing PHAN in a project directory
+   

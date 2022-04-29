@@ -1,4 +1,11 @@
 
+null-ls: require("null-ls.health").check()
+========================================================================
+  - ERROR: prettier: the command "prettier" is not executable.
+  - ERROR: black: the command "black" is not executable.
+  - ERROR: stylua: the command "stylua" is not executable.
+  - ERROR: google_java_format: the command "google-java-format" is not executable.
+
 nvim: health#nvim#check
 ========================================================================
 ## Configuration
@@ -15,6 +22,31 @@ nvim: health#nvim#check
   - INFO: key_dc (kdch1) terminfo entry: key_dc=\E[3~
   - INFO: $VTE_VERSION='6800'
   - INFO: $COLORTERM='truecolor'
+
+nvim-lsp-installer: require("nvim-lsp-installer.health").check()
+========================================================================
+## nvim-lsp-installer report
+  - OK: neovim version >= 0.6.0
+  - WARNING: **Go**: not available
+  - WARNING: **cargo**: not available
+  - WARNING: **Ruby**: not available
+  - WARNING: **RubyGem**: not available
+  - WARNING: **Composer**: not available
+  - WARNING: **javac**: not available
+  - WARNING: **julia**: not available
+  - OK: **sh**: `Ok`
+  - OK: **bash**: `GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)`
+  - OK: **python3_host_prog**: `Python 3.10.4`
+  - OK: **tar**: `tar (GNU tar) 1.34`
+  - OK: **gzip**: `gzip 1.10`
+  - OK: **wget**: `GNU Wget 1.21.2 built on linux-gnu.`
+  - OK: **python3**: `Python 3.10.4`
+  - OK: **node**: `v16.15.0`
+  - OK: **curl**: `curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.11`
+  - OK: **PHP**: `PHP 8.1.2 (cli) (built: Apr  7 2022 17:46:26) (NTS)`
+  - OK: **java**: `Ok`
+  - OK: **npm**: `8.5.5`
+  - OK: **pip3**: `pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)`
 
 provider: health#provider#check
 ========================================================================
@@ -42,11 +74,19 @@ provider: health#provider#check
 ## Perl provider (optional)
   - INFO: Disabled (g:loaded_perl_provider=0).
 
+renamer: require("renamer.health").check()
+========================================================================
+## Checking required plugins...
+  - OK: "plenary" installed.
+  - INFO: Found all required plugins.
+
+## Chechking whether setup was made...
+
 vim.lsp: require("vim.lsp.health").check()
 ========================================================================
   - INFO: LSP log level : WARN
   - INFO: Log path: /home/creams/.cache/nvim/lsp.log
-  - INFO: Log size: 0 KB
+  - INFO: Log size: 1 KB
 
 vim.treesitter: require("vim.treesitter.health").check()
 ========================================================================
