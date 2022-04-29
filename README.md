@@ -1,17 +1,8 @@
 # README
 
-+   inspired by git@github.com:ChristianChiarulli/nvim.git
++   inspired by [ChristianChiarulli/nvim.git](https://github.comChristianChiarulli/nvim.git)
     +   that was a bit like wanting to drive a stick and being handed the keys to a Formula-One
 +   developing in mainline  but will tag commits of interest
-
-## Ops
-
-+   :PackerUpdate will rebuild plugins if necessary
-    +   nvim -c PackerUpdate will do it from CLI
-
-## TODO
-
-+   integrating PHAN with LSP will require installing PHAN in a project directory
 
 ## Plugins
 
@@ -111,3 +102,13 @@
 + [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) -- ACTIVE
 + [windwp/nvim-spectre](https://github.com/windwp/nvim-spectre) -- Suggested
 + [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) -- Suggested
+
+## My Ops Notes
+
++   :PackerUpdate will rebuild plugins if necessary
+    +   nvim -c PackerUpdate will do it from CLI
+
+## TODO
+
++   integrating PHAN with LSP may require installing PHAN in a project directory
+
