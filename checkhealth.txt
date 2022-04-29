@@ -1,0 +1,55 @@
+
+nvim: health#nvim#check
+========================================================================
+## Configuration
+  - OK: no issues found
+
+## Performance
+  - OK: Build type: Release
+
+## Remote Plugins
+  - OK: Up to date
+
+## terminal
+  - INFO: key_backspace (kbs) terminfo entry: key_backspace=\177
+  - INFO: key_dc (kdch1) terminfo entry: key_dc=\E[3~
+  - INFO: $VTE_VERSION='6800'
+  - INFO: $COLORTERM='truecolor'
+
+provider: health#provider#check
+========================================================================
+## Clipboard (optional)
+  - OK: Clipboard tool found: xsel
+
+## Python 3 provider (optional)
+  - INFO: Using: g:python3_host_prog = "/usr/bin/python3"
+  - INFO: Executable: /usr/bin/python3
+  - INFO: Python version: 3.10.4
+  - INFO: pynvim version: 0.4.3
+  - OK: Latest pynvim is installed.
+
+## Python virtualenv
+  - OK: no $VIRTUAL_ENV
+
+## Ruby provider (optional)
+  - WARNING: `ruby` and `gem` must be in $PATH.
+    - ADVICE:
+      - Install Ruby and verify that `ruby` and `gem` commands work.
+
+## Node.js provider (optional)
+  - INFO: Disabled (g:loaded_node_provider=0).
+
+## Perl provider (optional)
+  - INFO: Disabled (g:loaded_perl_provider=0).
+
+vim.lsp: require("vim.lsp.health").check()
+========================================================================
+  - INFO: LSP log level : WARN
+  - INFO: Log path: /home/creams/.cache/nvim/lsp.log
+  - INFO: Log size: 0 KB
+
+vim.treesitter: require("vim.treesitter.health").check()
+========================================================================
+  - INFO: Runtime ABI version : 14
+  - OK: Loaded parser for c: ABI version 13
+
