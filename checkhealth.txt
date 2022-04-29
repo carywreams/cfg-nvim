@@ -42,11 +42,43 @@ nvim-lsp-installer: require("nvim-lsp-installer.health").check()
   - OK: **wget**: `GNU Wget 1.21.2 built on linux-gnu.`
   - OK: **python3**: `Python 3.10.4`
   - OK: **node**: `v16.15.0`
-  - OK: **curl**: `curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.11`
   - OK: **PHP**: `PHP 8.1.2 (cli) (built: Apr  7 2022 17:46:26) (NTS)`
+  - OK: **curl**: `curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.11`
   - OK: **java**: `Ok`
   - OK: **npm**: `8.5.5`
   - OK: **pip3**: `pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)`
+
+nvim-treesitter: require("nvim-treesitter.health").check()
+========================================================================
+## Installation
+  - WARNING: `tree-sitter` executable not found (parser generator, only needed for :TSInstallFromGrammar, not required for :TSInstall)
+  - OK: `node` found v16.15.0 (only needed for :TSInstallFromGrammar)
+  - OK: `git` executable found.
+  - OK: `cc` executable found. Selected from { vim.NIL, "cc", "gcc", "clang", "cl", "zig" }
+    Version: cc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
+  - OK: Neovim was compiled with tree-sitter runtime ABI version 14 (required >=13). Parsers must be compatible with runtime ABI.
+
+## Parser/Features H L F I J
+  - make           ✓ . . . ✓ 
+  - json           ✓ ✓ ✓ ✓ . 
+  - javascript     ✓ ✓ ✓ ✓ ✓ 
+  - php            ✓ ✓ ✓ ✓ ✓ 
+  - css            ✓ . ✓ ✓ ✓ 
+  - scss           ✓ . . ✓ . 
+  - bash           ✓ ✓ ✓ . ✓ 
+  - latex          ✓ . ✓ . ✓ 
+  - http           ✓ . . . ✓ 
+  - c              ✓ ✓ ✓ ✓ ✓ 
+  - vim            ✓ ✓ . . ✓ 
+  - r              ✓ ✓ . ✓ ✓ 
+  - query          ✓ ✓ ✓ ✓ ✓ 
+  - html           ✓ ✓ ✓ ✓ ✓ 
+  - markdown       ✓ . ✓ . ✓ 
+  - yaml           ✓ ✓ ✓ ✓ ✓ 
+
+  Legend: H[ighlight], L[ocals], F[olds], I[ndents], In[j]ections
+         +) multiple parsers found, only one will be used
+         x) errors found in the query, try to run :TSUpdate {lang}
 
 provider: health#provider#check
 ========================================================================
@@ -82,14 +114,48 @@ renamer: require("renamer.health").check()
 
 ## Chechking whether setup was made...
 
+telescope: require("telescope.health").check()
+========================================================================
+## Checking for required plugins
+  - OK: plenary installed.
+  - OK: nvim-treesitter installed.
+
+## Checking external dependencies
+  - OK: rg: found ripgrep 13.0.0
+  - OK: fd: found fd 8.3.1
+
+## ===== Installed extensions =====
+
+## Telescope Extension: `file_browser`
+  - INFO: No healthcheck provided
+
+## Telescope Extension: `media_files`
+  - INFO: No healthcheck provided
+
 vim.lsp: require("vim.lsp.health").check()
 ========================================================================
   - INFO: LSP log level : WARN
   - INFO: Log path: /home/creams/.cache/nvim/lsp.log
-  - INFO: Log size: 1 KB
+  - INFO: Log size: 2 KB
 
 vim.treesitter: require("vim.treesitter.health").check()
 ========================================================================
   - INFO: Runtime ABI version : 14
+  - OK: Loaded parser for bash: ABI version 13
+  - OK: Loaded parser for c: ABI version 13
+  - OK: Loaded parser for css: ABI version 13
+  - OK: Loaded parser for html: ABI version 13
+  - OK: Loaded parser for http: ABI version 13
+  - OK: Loaded parser for javascript: ABI version 13
+  - OK: Loaded parser for json: ABI version 13
+  - OK: Loaded parser for latex: ABI version 13
+  - OK: Loaded parser for make: ABI version 13
+  - OK: Loaded parser for markdown: ABI version 13
+  - OK: Loaded parser for php: ABI version 13
+  - OK: Loaded parser for query: ABI version 13
+  - OK: Loaded parser for r: ABI version 13
+  - OK: Loaded parser for scss: ABI version 13
+  - OK: Loaded parser for vim: ABI version 13
+  - OK: Loaded parser for yaml: ABI version 13
   - OK: Loaded parser for c: ABI version 13
 

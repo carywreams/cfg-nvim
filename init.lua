@@ -26,3 +26,13 @@ require "user.lunarvim_colorschemes_config"
 require "user.hrsh7th_nvim_cmp_config"
 require "user.filipdutescu_renamer_config"
 require "user.lsp"
+
+
+-- tag: generation_03
+require "user.nvim_telescope_config"
+require "user.nvim_treesitter_config"
+-- git support start
+require "user.f_person_git_blame_config"
+require "user.lewis6991_gitsigns_config"
+-- git support stop
+ 
