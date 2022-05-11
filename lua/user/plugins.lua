@@ -100,7 +100,9 @@ return packer.startup(function(use)
 
   --  -- Git
   use "lewis6991/gitsigns.nvim"                       -- p:git --
-  use "f-person/git-blame.nvim"                       -- p:git --
+  -- use "f-person/git-blame.nvim"                       -- p:git --
+
+  -- DAP - Debug Adapter Protocol plugins from suggested list may be interesting here 
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

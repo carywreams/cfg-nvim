@@ -32,7 +32,7 @@ require "user.lsp"
 require "user.nvim_telescope_config"
 require "user.nvim_treesitter_config"
 -- git support start
-require "user.f_person_git_blame_config"
+-- require "user.f_person_git_blame_config"
 require "user.lewis6991_gitsigns_config"
 -- git support stop
  
