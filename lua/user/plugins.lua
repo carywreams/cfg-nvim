@@ -52,9 +52,13 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   --  -- LSP
+  use "akinsho/bufferline.nvim"           -- p:lsp -- other tools for lsp wanted this available
+  use "SmiteshP/nvim-gps"                 -- p:lsp -- lualine wanted this
+  use "nvim-lualine/lualine.nvim"         -- p:lsp -- used for status line updates 
   use "neovim/nvim-lspconfig"             -- p:lsp -- enable LSP
   use "williamboman/nvim-lsp-installer"   -- p:lsp -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim"      -- p:lsp -- language server settings defined in json for
+  use "b0o/SchemaStore.nvim"              -- p:lsp -- json catalog
 
   -- cmp plugins
   -- nvim-cmp suggests these appear after nvim-lspconfig
@@ -103,6 +107,7 @@ return packer.startup(function(use)
   -- use "f-person/git-blame.nvim"                       -- p:git --
 
   -- DAP - Debug Adapter Protocol plugins from suggested list may be interesting here 
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

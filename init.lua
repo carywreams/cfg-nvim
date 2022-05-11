@@ -35,4 +35,8 @@ require "user.nvim_treesitter_config"
 -- require "user.f_person_git_blame_config"
 require "user.lewis6991_gitsigns_config"
 -- git support stop
- 
+
+-- tag: generation_04
+require "user.akinsho_bufferline"
+require "user.smiteshp_nvim-gps"
+require "user.nvim_lualine_config"

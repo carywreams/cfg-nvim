@@ -26,11 +26,9 @@ nvim: health#nvim#check
 nvim-lsp-installer: require("nvim-lsp-installer.health").check()
 ========================================================================
 ## nvim-lsp-installer report
-  - OK: neovim version >= 0.6.0
+  - OK: neovim version >= 0.7.0
   - WARNING: **Go**: not available
   - WARNING: **cargo**: not available
-  - WARNING: **Ruby**: not available
-  - WARNING: **RubyGem**: not available
   - WARNING: **Composer**: not available
   - WARNING: **javac**: not available
   - WARNING: **julia**: not available
@@ -42,9 +40,11 @@ nvim-lsp-installer: require("nvim-lsp-installer.health").check()
   - OK: **wget**: `GNU Wget 1.21.2 built on linux-gnu.`
   - OK: **python3**: `Python 3.10.4`
   - OK: **node**: `v16.15.0`
-  - OK: **PHP**: `PHP 8.1.2 (cli) (built: Apr  7 2022 17:46:26) (NTS)`
+  - OK: **Ruby**: `ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]`
   - OK: **curl**: `curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.11`
+  - OK: **PHP**: `PHP 8.1.2 (cli) (built: Apr  7 2022 17:46:26) (NTS)`
   - OK: **java**: `Ok`
+  - OK: **RubyGem**: `3.3.5`
   - OK: **npm**: `8.5.5`
   - OK: **pip3**: `pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)`
 
@@ -59,22 +59,22 @@ nvim-treesitter: require("nvim-treesitter.health").check()
   - OK: Neovim was compiled with tree-sitter runtime ABI version 14 (required >=13). Parsers must be compatible with runtime ABI.
 
 ## Parser/Features H L F I J
-  - make           ✓ . . . ✓ 
-  - json           ✓ ✓ ✓ ✓ . 
-  - javascript     ✓ ✓ ✓ ✓ ✓ 
-  - php            ✓ ✓ ✓ ✓ ✓ 
-  - css            ✓ . ✓ ✓ ✓ 
-  - scss           ✓ . . ✓ . 
-  - bash           ✓ ✓ ✓ . ✓ 
-  - latex          ✓ . ✓ . ✓ 
-  - http           ✓ . . . ✓ 
-  - c              ✓ ✓ ✓ ✓ ✓ 
-  - vim            ✓ ✓ . . ✓ 
-  - r              ✓ ✓ . ✓ ✓ 
-  - query          ✓ ✓ ✓ ✓ ✓ 
   - html           ✓ ✓ ✓ ✓ ✓ 
   - markdown       ✓ . ✓ . ✓ 
+  - c              ✓ ✓ ✓ ✓ ✓ 
+  - query          ✓ ✓ ✓ ✓ ✓ 
   - yaml           ✓ ✓ ✓ ✓ ✓ 
+  - vim            ✓ ✓ . . ✓ 
+  - http           ✓ . . . ✓ 
+  - make           ✓ . . . ✓ 
+  - php            ✓ ✓ ✓ ✓ ✓ 
+  - javascript     ✓ ✓ ✓ ✓ ✓ 
+  - css            ✓ . ✓ ✓ ✓ 
+  - scss           ✓ . . ✓ . 
+  - latex          ✓ . ✓ . ✓ 
+  - r              ✓ ✓ . ✓ ✓ 
+  - bash           ✓ ✓ ✓ . ✓ 
+  - json           ✓ ✓ ✓ ✓ . 
 
   Legend: H[ighlight], L[ocals], F[olds], I[ndents], In[j]ections
          +) multiple parsers found, only one will be used
@@ -96,9 +96,14 @@ provider: health#provider#check
   - OK: no $VIRTUAL_ENV
 
 ## Ruby provider (optional)
-  - WARNING: `ruby` and `gem` must be in $PATH.
+  - INFO: Ruby: ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]
+  - WARNING: `neovim-ruby-host` not found.
     - ADVICE:
-      - Install Ruby and verify that `ruby` and `gem` commands work.
+      - Run `gem install neovim` to ensure the neovim RubyGem is installed.
+      - Run `gem environment` to ensure the gem bin directory is in $PATH.
+      - If you are using rvm/rbenv/chruby, try "rehashing".
+      - See :help |g:ruby_host_prog| for non-standard gem installations.
+      - You may disable this provider (and warning) by adding `let g:loaded_ruby_provider = 0` to your init.vim
 
 ## Node.js provider (optional)
   - INFO: Disabled (g:loaded_node_provider=0).
@@ -136,7 +141,7 @@ vim.lsp: require("vim.lsp.health").check()
 ========================================================================
   - INFO: LSP log level : WARN
   - INFO: Log path: /home/creams/.cache/nvim/lsp.log
-  - INFO: Log size: 2 KB
+  - INFO: Log size: 32 KB
 
 vim.treesitter: require("vim.treesitter.health").check()
 ========================================================================
