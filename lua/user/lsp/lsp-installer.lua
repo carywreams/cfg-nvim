@@ -3,10 +3,15 @@
 require("nvim-lsp-installer").setup {}
 local lspconfig = require("lspconfig")
 
-lspconfig.sumneko_lua.setup {
-  on_attach = on_attach,
-  settings = require "user.lsp.settings.sumneko_lua"
-}
+-- removed 
+-- only vscode engine ready to go
+-- build instructions required access via fastgit.xyz
+-- faulty SSL Cert with Common Name *.isaacchen.cn 
+-- I don't code lua often enough to  look into this right now.
+-- lspconfig.sumneko_lua.setup {
+--   on_attach = on_attach,
+--   settings = require "user.lsp.settings.sumneko_lua"
+-- }
 
 lspconfig.jsonls.setup {
   settings = require "user.lsp.settings.jsonls"
